@@ -1,4 +1,4 @@
-package com.example.studyfromvideo;
+package com.example.studyfromvideo.download;
 
 import java.io.BufferedReader;
 import java.io.File;

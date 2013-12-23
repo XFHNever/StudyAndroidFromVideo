@@ -32,5 +32,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/download_button"/>
+    
+    <Button android:id="@+id/broadcast_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/broadcast_button"/>
 
 </LinearLayout>

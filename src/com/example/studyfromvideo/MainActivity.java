@@ -1,5 +1,11 @@
 package com.example.studyfromvideo;
 
+import com.example.studyfromvideo.broadcast.BroadcastTestActivity;
+import com.example.studyfromvideo.download.DownloadTestActivity;
+import com.example.studyfromvideo.handler.HandlerTestActivity;
+import com.example.studyfromvideo.intent.IntentTestActivity;
+import com.example.studyfromvideo.sqlite.SQLiteTestActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -15,6 +21,7 @@ public class MainActivity extends Activity {
     private Button handler_test_button = null;
     private Button sqlite_test_button = null;
     private Button download_test_button = null;
+    private Button broadcast_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,6 +60,9 @@ public class MainActivity extends Activity {
 		
 		download_test_button = (Button) findViewById(R.id.download_button);
 		download_test_button.setOnClickListener(new DownloadTestListener());
+		
+		broadcast_test_button = (Button) findViewById(R.id.broadcast_button);
+		broadcast_test_button.setOnClickListener(new BroadcastTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -102,6 +112,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, DownloadTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class BroadcastTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, BroadcastTestActivity.class);
 			startActivity(intent);
 		}
 		

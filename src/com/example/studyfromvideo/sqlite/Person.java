@@ -1,4 +1,4 @@
-package com.example.studyfromvideo;
+package com.example.studyfromvideo.sqlite;
 
 public class Person {
 	public int _id;

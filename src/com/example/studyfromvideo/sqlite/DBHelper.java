@@ -1,4 +1,4 @@
-package com.example.studyfromvideo;
+package com.example.studyfromvideo.sqlite;
 
 import android.content.Context;
 import android.database.DatabaseErrorHandler;

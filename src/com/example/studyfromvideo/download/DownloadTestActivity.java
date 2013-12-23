@@ -1,4 +1,8 @@
-package com.example.studyfromvideo;
+package com.example.studyfromvideo.download;
+
+import com.example.studyfromvideo.R;
+import com.example.studyfromvideo.R.id;
+import com.example.studyfromvideo.R.layout;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

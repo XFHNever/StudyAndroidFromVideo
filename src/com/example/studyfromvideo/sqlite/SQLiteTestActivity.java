@@ -1,9 +1,13 @@
-package com.example.studyfromvideo;
+package com.example.studyfromvideo.sqlite;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.example.studyfromvideo.R;
+import com.example.studyfromvideo.R.id;
+import com.example.studyfromvideo.R.layout;
 
 import android.app.Activity;
 import android.database.Cursor;

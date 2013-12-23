@@ -24,18 +24,29 @@
 				<category android:name="android.intent.category.LAUNCHER" />               
             </intent-filter>
         </activity>
-        <activity android:name="com.example.studyfromvideo.IntentTestActivity" 
+        <activity android:name="com.example.studyfromvideo.intent.IntentTestActivity" 
             android:label="@string/title_activity_intentTest">
         </activity>
-         <activity android:name="com.example.studyfromvideo.HandlerTestActivity"
+         <activity android:name="com.example.studyfromvideo.handler.HandlerTestActivity"
                    android:label="@string/title_activity_handlerTest">
         </activity>
-        <activity android:name="com.example.studyfromvideo.SQLiteTestActivity"
+        <activity android:name="com.example.studyfromvideo.sqlite.SQLiteTestActivity"
                   android:label="@string/title_activity_sqliteTest">
         </activity>
-           <activity android:name="com.example.studyfromvideo.DownloadTestActivity"
+           <activity android:name="com.example.studyfromvideo.download.DownloadTestActivity"
                   android:label="@string/title_activity_downloadTest">
         </activity>
+        <activity android:name="com.example.studyfromvideo.broadcast.BroadcastTestActivity"
+                  android:label="@string/title_activity_broadcastTest">
+        </activity>
+        
+        
+        
+        <receiver android:name="com.example.studyfromvideo.broadcast.MyReceiver1">
+            <intent-filter >
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
