@@ -39,6 +39,12 @@
         <activity android:name="com.example.studyfromvideo.broadcast.BroadcastTestActivity"
                   android:label="@string/title_activity_broadcastTest">
         </activity>
+        <activity android:name="com.example.studyfromvideo.xml.SAXTestActivity"
+                  android:label="@string/title_activity_saxTest">
+        </activity>
+         <activity android:name="com.example.studyfromvideo.contentprovider.CPTestActivity"
+                  android:label="@string/title_activity_cpTest">
+        </activity>
         
         
         

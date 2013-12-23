@@ -8,6 +8,8 @@
     <string name="title_activity_sqliteTest">SQLiteTestActivity</string>
     <string name="title_activity_downloadTest">DownloadTestActivity</string>
     <string name="title_activity_broadcastTest">BroadcastTestActivity</string>
+    <string name="title_activity_saxTest">SAXTestActivity</string>
+    <string name="title_activity_cpTest">CPTestActivity</string>
     
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
@@ -16,7 +18,8 @@
     <string name="sqlite_button">查看SQLite测试程序</string>
     <string name="download_button">查看Download测试程序</string>
     <string name="broadcast_button">查看Broadcast测试程序</string>
-    
+    <string name="sax_button">查看解析XML测试程序</string>
+    <string name="cp_button">查看contentProvider测试程序</string>
     
     <string name="send_mai_button">发送邮件</string>
     <string name="start_handler_button">开始handler</string>
@@ -25,6 +28,12 @@
     <string name="send_message_button">发送信息给receiver</string>
     <string name="register_button">注册receiver</string>
     <string name="unregister_button">解除注册receiver</string>
+    <string name="sax_read_button">使用SAXReadXML</string>
+    <string name="sax_write_button">使用SAXWriteXML</string>
+    <string name="dom_read_button">使用DOMReadXML</string>
+    <string name="dom_write_button">使用DOMWriteXML</string>
+    <string name="pull_read_button">使用PullReadXML</string>
+    <string name="pull_write_button">使用PullWriteXML</string>
     
 
     <string name="exit">退出</string>

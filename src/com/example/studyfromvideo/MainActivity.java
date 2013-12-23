@@ -1,14 +1,15 @@
 package com.example.studyfromvideo;
 
 import com.example.studyfromvideo.broadcast.BroadcastTestActivity;
+import com.example.studyfromvideo.contentprovider.CPTestActivity;
 import com.example.studyfromvideo.download.DownloadTestActivity;
 import com.example.studyfromvideo.handler.HandlerTestActivity;
 import com.example.studyfromvideo.intent.IntentTestActivity;
 import com.example.studyfromvideo.sqlite.SQLiteTestActivity;
+import com.example.studyfromvideo.xml.SAXTestActivity;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,8 @@ public class MainActivity extends Activity {
     private Button sqlite_test_button = null;
     private Button download_test_button = null;
     private Button broadcast_test_button = null;
+    private Button sax_test_button = null;
+    private Button cp_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -63,6 +66,12 @@ public class MainActivity extends Activity {
 		
 		broadcast_test_button = (Button) findViewById(R.id.broadcast_button);
 		broadcast_test_button.setOnClickListener(new BroadcastTestListener());
+	
+		sax_test_button = (Button) findViewById(R.id.sax_button);
+		sax_test_button.setOnClickListener(new SAXTestListener());
+		
+		cp_test_button = (Button) findViewById(R.id.cp_button);
+		cp_test_button.setOnClickListener(new CPTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -124,6 +133,30 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, BroadcastTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class SAXTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, SAXTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class CPTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, CPTestActivity.class);
 			startActivity(intent);
 		}
 		

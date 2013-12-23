@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <Button android:id="@+id/sax_read_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sax_read_button"/>
+     <Button android:id="@+id/sax_write_button"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/sax_write_button"/>
+     
+
+     
+     <Button android:id="@+id/dom_read_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dom_read_button"/>
+     <Button android:id="@+id/dom_write_button"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/dom_write_button"/>
+     
+     <Button android:id="@+id/pull_read_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pull_read_button"/>
+     <Button android:id="@+id/pull_write_button"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/pull_write_button"/>
+     
+     <TextView android:id="@+id/sax_textView"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"/>
+
+</LinearLayout>
