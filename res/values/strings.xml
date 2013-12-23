@@ -34,6 +34,8 @@
     <string name="dom_write_button">使用DOMWriteXML</string>
     <string name="pull_read_button">使用PullReadXML</string>
     <string name="pull_write_button">使用PullWriteXML</string>
+    <string name="insert_button">insert</string>
+    <string name="query_button">query</string>
     
 
     <string name="exit">退出</string>

@@ -4,5 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-
+    <Button android:id="@+id/insert_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/insert_button"/>
+    
+    <Button android:id="@+id/query_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/query_button"/>
+    <TextView android:id="@+id/cp_textView"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"/>
 </LinearLayout>

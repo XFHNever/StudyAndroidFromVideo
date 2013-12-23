@@ -53,6 +53,9 @@
                 <action android:name="android.intent.action.MEDIA_BUTTON"/>
             </intent-filter>
         </receiver>
+        
+        <provider android:name="com.example.studyfromvideo.contentprovider.FirstContentProvider"
+            android:authorities="com.example.studyfromvideo.contentprovider.FirstContentProvider"/>
     </application>
 
 </manifest>
