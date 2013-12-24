@@ -6,6 +6,7 @@ import com.example.studyfromvideo.download.DownloadTestActivity;
 import com.example.studyfromvideo.handler.HandlerTestActivity;
 import com.example.studyfromvideo.intent.IntentTestActivity;
 import com.example.studyfromvideo.sqlite.SQLiteTestActivity;
+import com.example.studyfromvideo.wifi.WifiTestActivity;
 import com.example.studyfromvideo.xml.SAXTestActivity;
 
 import android.os.Bundle;
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
     private Button broadcast_test_button = null;
     private Button sax_test_button = null;
     private Button cp_test_button = null;
+    private Button wifi_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,6 +74,9 @@ public class MainActivity extends Activity {
 		
 		cp_test_button = (Button) findViewById(R.id.cp_button);
 		cp_test_button.setOnClickListener(new CPTestListener());
+		
+		wifi_test_button = (Button) findViewById(R.id.wifi_button);
+		wifi_test_button.setOnClickListener(new WifiTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -157,6 +162,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, CPTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class WifiTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, WifiTestActivity.class);
 			startActivity(intent);
 		}
 		

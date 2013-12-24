@@ -47,5 +47,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/cp_button"/>
+    
+    <Button android:id="@+id/wifi_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wifi_button"/>
      
 </LinearLayout>
