@@ -6,93 +6,104 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 
 
 public class DownloadHelper {
-    private URL url = null;
-    
-    public String download(String urlStr){
-    	StringBuffer sb = new StringBuffer();
-    	String line = null;
-    	BufferedReader reader = null;
-    	try {
+	private URL url = null;
 
-			URL url = new URL(urlStr);   
-            // 打开连接   
-HttpURLConnection con = (HttpURLConnection) url.openConnection();
+	/**
+	 * 根据URL下载文件，前提是这个文件当中的内容是文本，函数的返回值就是文件当中的内容
+	 * 1.创建一个URL对象
+	 * 2.通过URL对象，创建一个HttpURLConnection对象
+	 * 3.得到InputStram
+	 * 4.从InputStream当中读取数据
+	 * @param urlStr
+	 * @return
+	 */
+	public String download(String urlStr) {
+		StringBuffer sb = new StringBuffer();
+		String line = null;
+		BufferedReader buffer = null;
+		try {
+			// 创建一个URL对象
+			url = new URL(urlStr);
+			// 创建一个Http连接
+			HttpURLConnection urlConn = (HttpURLConnection) url
+					.openConnection();
+			
+	//	    urlConn.connect();
 
-				
-		System.out.println("con=" + con);
-		System.out.println(1);
-		System.out.println("con.getInputStream" +con.getInputStream());
-		System.out.println(2);
-		con.connect();
-		System.out.println(3);
-    	    try {
-    	    	System.out.println(4);
-				reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-    	    
-    	    System.out.println("reader" + reader);
-    	    
-			while((line=reader.readLine())!=null){
+		    
+			System.out.println("ddd");
+			// 使用IO流读取数据
+			buffer = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+			System.out.println("tt");
+			while ((line = buffer.readLine()) != null) {
 				sb.append(line);
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-//			try {
-//				reader.close();
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-		}
-    	
-    	return sb.toString();
-    }
-    
-    public int downloadFile(String urlStr,String path,String fileName) {
-    	InputStream inputStream = null;
-    	FileUtil fileUtil = new FileUtil();
-    	
-    	if(fileUtil.isFileExist(path + fileName)){
-    		return 1;
-    	} else {
-    		try {
-				inputStream = getInputStreamFromUrl(urlStr);
+			try {
+				buffer.close();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-    		File resultFile = fileUtil.write2SDFromInput(path, fileName, inputStream);
-    		if(resultFile == null) {
-    			return -1;
-    		}
-    	}
-    	
-    	try {
-			inputStream.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-    	return 0;
-    }
-    
-    public InputStream getInputStreamFromUrl(String urlStr) throws Exception{
-    	InputStream inputStream = null;   	
-		url = new URL(urlStr);
-		HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-		inputStream = urlConnection.getInputStream();
+		return sb.toString();
+	}
 
-    	return inputStream;
-    }
+	/**
+	 * 该函数返回整形 -1：代表下载文件出错 0：代表下载文件成功 1：代表文件已经存在
+	 */
+	public int downFile(String urlStr, String path, String fileName) {
+		InputStream inputStream = null;
+		try {
+			FileUtil fileUtils = new FileUtil();
+			if (fileUtils.isFileExist(fileName,path)) {
+				return 1;
+			} else {
+				inputStream = getInputStreamFromUrl(urlStr);
+				File resultFile = fileUtils.write2SDFromInput(path,fileName, inputStream);
+				if (resultFile == null) {
+					return -1;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return -1;
+		} finally {
+			try {
+				inputStream.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+
+	/**
+	 * 根据URL得到输入流
+	 * 
+	 * @param urlStr
+	 * @return
+	 * @throws MalformedURLException
+	 * @throws IOException
+	 */
+	public InputStream getInputStreamFromUrl(String urlStr)
+			throws MalformedURLException, IOException {
+		url = new URL(urlStr);
+		HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
+		InputStream inputStream = urlConn.getInputStream();
+		return inputStream;
+	}
 }

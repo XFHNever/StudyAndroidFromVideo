@@ -37,6 +37,13 @@ public class FileUtil {
     	File file = new File(SDPATH + fileName);
     	return file.exists();
     }
+    /**
+	 * 判断SD卡上的文件夹是否存在
+	 */
+	public boolean isFileExist(String fileName, String path) {
+		File file = new File(SDPATH + path + File.separator + fileName);
+		return file.exists();
+	}
     
     public File write2SDFromInput(String path,String fileName,InputStream input) {
     	File file = null;
