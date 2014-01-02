@@ -4,6 +4,7 @@ import com.example.studyfromvideo.broadcast.BroadcastTestActivity;
 import com.example.studyfromvideo.complexcomponent.ComplexCompActivity;
 import com.example.studyfromvideo.contentprovider.CPTestActivity;
 import com.example.studyfromvideo.download.DownloadTestActivity;
+import com.example.studyfromvideo.expandableListView.EXListViewActivity;
 import com.example.studyfromvideo.handler.HandlerTestActivity;
 import com.example.studyfromvideo.intent.IntentTestActivity;
 import com.example.studyfromvideo.sqlite.SQLiteTestActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity {
     private Button cp_test_button = null;
     private Button wifi_test_button = null;
     private Button complexComp_test_button = null;
+    private Button exlistView_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -82,6 +84,9 @@ public class MainActivity extends Activity {
 		
 		complexComp_test_button = (Button) findViewById(R.id.complexcomp_button);
 		complexComp_test_button.setOnClickListener(new ComplexCompTestListener());
+		
+		exlistView_test_button = (Button) findViewById(R.id.exlistView_button);
+		exlistView_test_button.setOnClickListener(new EXListViewTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -191,6 +196,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, ComplexCompActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class EXListViewTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, EXListViewActivity.class);
 			startActivity(intent);
 		}
 		

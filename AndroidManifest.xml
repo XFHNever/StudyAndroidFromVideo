@@ -55,6 +55,9 @@
         <activity android:name="com.example.studyfromvideo.complexcomponent.ComplexCompActivity"
                   android:label="@string/title_activity_complexcomp">
         </activity>
+        <activity android:name="com.example.studyfromvideo.expandableListView.EXListViewActivity"
+                  android:label="@string/title_activity_exlistview">
+        </activity>
         
         
         

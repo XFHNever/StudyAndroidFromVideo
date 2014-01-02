@@ -58,5 +58,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/complexcomp_button"/>
+   
+    <Button android:id="@+id/exlistView_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exlistview_button"/>
      
 </LinearLayout>
