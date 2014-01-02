@@ -39,14 +39,8 @@ public class DownloadHelper {
 			// 创建一个Http连接
 			HttpURLConnection urlConn = (HttpURLConnection) url
 					.openConnection();
-			
-	//	    urlConn.connect();
-
-		    
-			System.out.println("ddd");
 			// 使用IO流读取数据
 			buffer = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
-			System.out.println("tt");
 			while ((line = buffer.readLine()) != null) {
 				sb.append(line);
 			}

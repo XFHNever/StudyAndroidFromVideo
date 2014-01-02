@@ -1,6 +1,7 @@
 package com.example.studyfromvideo;
 
 import com.example.studyfromvideo.broadcast.BroadcastTestActivity;
+import com.example.studyfromvideo.complexcomponent.ComplexCompActivity;
 import com.example.studyfromvideo.contentprovider.CPTestActivity;
 import com.example.studyfromvideo.download.DownloadTestActivity;
 import com.example.studyfromvideo.handler.HandlerTestActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
     private Button sax_test_button = null;
     private Button cp_test_button = null;
     private Button wifi_test_button = null;
+    private Button complexComp_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -77,6 +79,9 @@ public class MainActivity extends Activity {
 		
 		wifi_test_button = (Button) findViewById(R.id.wifi_button);
 		wifi_test_button.setOnClickListener(new WifiTestListener());
+		
+		complexComp_test_button = (Button) findViewById(R.id.complexcomp_button);
+		complexComp_test_button.setOnClickListener(new ComplexCompTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -174,6 +179,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, WifiTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class ComplexCompTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, ComplexCompActivity.class);
 			startActivity(intent);
 		}
 		
