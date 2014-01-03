@@ -1,5 +1,6 @@
 package com.example.studyfromvideo;
 
+import com.example.studyfromvideo.animation.AnimationTestActivity;
 import com.example.studyfromvideo.appwidget.WidgetTestActivity;
 import com.example.studyfromvideo.broadcast.BroadcastTestActivity;
 import com.example.studyfromvideo.complexcomponent.ComplexCompActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends Activity {
     private Button complexComp_test_button = null;
     private Button exlistView_test_button = null;
     private Button widget_test_button = null;
+    private Button animation_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,7 +53,6 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
 		if(item.getItemId() == 1){
 			finish();
 		}
@@ -92,13 +93,15 @@ public class MainActivity extends Activity {
 		
 		widget_test_button = (Button) findViewById(R.id.widget_button);
 		widget_test_button.setOnClickListener(new WidgetTestListener());
+		
+		animation_test_button = (Button) findViewById(R.id.animation_button);
+		animation_test_button.setOnClickListener(new AnimationTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.putExtra("test", "test success");
 			Bundle bundle = new Bundle();
@@ -114,7 +117,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, HandlerTestActivity.class);
 			startActivity(intent);
@@ -225,6 +227,17 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, WidgetTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	class AnimationTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, AnimationTestActivity.class);
 			startActivity(intent);
 		}
 		

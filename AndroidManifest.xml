@@ -62,7 +62,9 @@
         <activity android:name="com.example.studyfromvideo.appwidget.WidgetTestActivity"
                   android:label="@string/title_activity_widgetTest">
         </activity>
-        
+        <activity android:name="com.example.studyfromvideo.animation.AnimationTestActivity"
+                  android:label="@string/title_activity_animationTest">
+        </activity>
         
         
         <receiver android:name="com.example.studyfromvideo.broadcast.MyReceiver1">
