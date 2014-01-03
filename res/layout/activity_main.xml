@@ -63,5 +63,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/exlistview_button"/>
+    
+    <Button android:id="@+id/widget_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/widget_button"/>
      
 </LinearLayout>

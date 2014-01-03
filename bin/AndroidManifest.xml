@@ -59,6 +59,10 @@
                   android:label="@string/title_activity_exlistview">
         </activity>
         
+        <activity android:name="com.example.studyfromvideo.appwidget.WidgetTestActivity"
+                  android:label="@string/title_activity_widgetTest">
+        </activity>
+        
         
         
         <receiver android:name="com.example.studyfromvideo.broadcast.MyReceiver1">
@@ -66,6 +70,17 @@
                 <action android:name="android.intent.action.MEDIA_BUTTON"/>
             </intent-filter>
         </receiver>
+        
+        <receiver android:name="com.example.studyfromvideo.appwidget.ExampleAppWidgetProvider" >
+		    <intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		    </intent-filter>
+		    <intent-filter>
+		        <action android:name="studyFromVideo.UPDATE_ACTION" />
+		    </intent-filter>
+		    <meta-data android:name="android.appwidget.provider"
+		               android:resource="@xml/appwidget" />
+		</receiver>
         
         <provider android:name="com.example.studyfromvideo.contentprovider.FirstContentProvider"
             android:authorities="com.example.studyfromvideo.contentprovider.FirstContentProvider"/>
