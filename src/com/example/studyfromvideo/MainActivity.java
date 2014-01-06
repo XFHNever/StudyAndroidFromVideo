@@ -2,6 +2,7 @@ package com.example.studyfromvideo;
 
 import com.example.studyfromvideo.animation.AnimationTestActivity;
 import com.example.studyfromvideo.appwidget.WidgetTestActivity;
+import com.example.studyfromvideo.blueTooth.BlueToothTestActivity;
 import com.example.studyfromvideo.broadcast.BroadcastTestActivity;
 import com.example.studyfromvideo.complexcomponent.ComplexCompActivity;
 import com.example.studyfromvideo.contentprovider.CPTestActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends Activity {
     private Button widget_test_button = null;
     private Button animation_test_button = null;
     private Button json_test_button = null;
+    private Button blueTooth_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -101,6 +103,9 @@ public class MainActivity extends Activity {
 		
 		json_test_button = (Button) findViewById(R.id.json_button);
 		json_test_button.setOnClickListener(new JsonTestListener());
+		
+		blueTooth_button = (Button) findViewById(R.id.bluetooth_button);
+		blueTooth_button.setOnClickListener(new BlueToothTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -133,7 +138,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, SQLiteTestActivity.class);
 			startActivity(intent);
@@ -145,7 +149,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, DownloadTestActivity.class);
 			startActivity(intent);
@@ -193,7 +196,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, WifiTestActivity.class);
 			startActivity(intent);
@@ -217,7 +219,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, EXListViewActivity.class);
 			startActivity(intent);
@@ -229,7 +230,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, WidgetTestActivity.class);
 			startActivity(intent);
@@ -240,7 +240,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View arg0) {
-			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, AnimationTestActivity.class);
 			startActivity(intent);
@@ -255,6 +254,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, JsonTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class BlueToothTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, BlueToothTestActivity.class);
 			startActivity(intent);
 		}
 		
