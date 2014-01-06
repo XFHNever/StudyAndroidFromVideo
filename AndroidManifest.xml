@@ -7,15 +7,16 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -25,75 +26,98 @@
         <activity
             android:name="com.example.studyfromvideo.MainActivity"
             android:label="@string/title_activity_main" >
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-				<category android:name="android.intent.category.LAUNCHER" />               
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.studyfromvideo.intent.IntentTestActivity" 
-            android:label="@string/title_activity_intentTest">
+        <activity
+            android:name="com.example.studyfromvideo.intent.IntentTestActivity"
+            android:label="@string/title_activity_intentTest" >
         </activity>
-         <activity android:name="com.example.studyfromvideo.handler.HandlerTestActivity"
-                   android:label="@string/title_activity_handlerTest">
+        <activity
+            android:name="com.example.studyfromvideo.handler.HandlerTestActivity"
+            android:label="@string/title_activity_handlerTest" >
         </activity>
-        <activity android:name="com.example.studyfromvideo.sqlite.SQLiteTestActivity"
-                  android:label="@string/title_activity_sqliteTest">
+        <activity
+            android:name="com.example.studyfromvideo.sqlite.SQLiteTestActivity"
+            android:label="@string/title_activity_sqliteTest" >
         </activity>
-           <activity android:name="com.example.studyfromvideo.download.DownloadTestActivity"
-                  android:label="@string/title_activity_downloadTest">
+        <activity
+            android:name="com.example.studyfromvideo.download.DownloadTestActivity"
+            android:label="@string/title_activity_downloadTest" >
         </activity>
-        <activity android:name="com.example.studyfromvideo.broadcast.BroadcastTestActivity"
-                  android:label="@string/title_activity_broadcastTest">
+        <activity
+            android:name="com.example.studyfromvideo.broadcast.BroadcastTestActivity"
+            android:label="@string/title_activity_broadcastTest" >
         </activity>
-        <activity android:name="com.example.studyfromvideo.xml.SAXTestActivity"
-                  android:label="@string/title_activity_saxTest">
+        <activity
+            android:name="com.example.studyfromvideo.xml.SAXTestActivity"
+            android:label="@string/title_activity_saxTest" >
         </activity>
-         <activity android:name="com.example.studyfromvideo.contentprovider.CPTestActivity"
-                  android:label="@string/title_activity_cpTest">
+        <activity
+            android:name="com.example.studyfromvideo.contentprovider.CPTestActivity"
+            android:label="@string/title_activity_cpTest" >
         </activity>
-        <activity android:name="com.example.studyfromvideo.wifi.WifiTestActivity"
-                  android:label="@string/title_activity_wifiTest">
+        <activity
+            android:name="com.example.studyfromvideo.wifi.WifiTestActivity"
+            android:label="@string/title_activity_wifiTest" >
         </activity>
-        <activity android:name="com.example.studyfromvideo.complexcomponent.ComplexCompActivity"
-                  android:label="@string/title_activity_complexcomp">
+        <activity
+            android:name="com.example.studyfromvideo.complexcomponent.ComplexCompActivity"
+            android:label="@string/title_activity_complexcomp" >
         </activity>
-        <activity android:name="com.example.studyfromvideo.expandableListView.EXListViewActivity"
-                  android:label="@string/title_activity_exlistview">
+        <activity
+            android:name="com.example.studyfromvideo.expandableListView.EXListViewActivity"
+            android:label="@string/title_activity_exlistview" >
+        </activity>
+        <activity
+            android:name="com.example.studyfromvideo.appwidget.WidgetTestActivity"
+            android:label="@string/title_activity_widgetTest" >
+        </activity>
+        <activity
+            android:name="com.example.studyfromvideo.animation.AnimationTestActivity"
+            android:label="@string/title_activity_animationTest" >
+        </activity>
+        <activity
+            android:name="com.example.studyfromvideo.json.JsonTestActivity"
+            android:label="@string/title_activity_jsonTest" >
+        </activity>
+        <activity
+            android:name="com.example.studyfromvideo.blueTooth.BlueToothTestActivity"
+            android:label="@string/title_activity_bluetoothTest" >
+        </activity>
+        <activity
+            android:name="com.example.studyfromvideo.location.LocationTestActivity"
+            android:label="@string/title_activity_location_test" >
         </activity>
         
-        <activity android:name="com.example.studyfromvideo.appwidget.WidgetTestActivity"
-                  android:label="@string/title_activity_widgetTest">
-        </activity>
-        <activity android:name="com.example.studyfromvideo.animation.AnimationTestActivity"
-                  android:label="@string/title_activity_animationTest">
-        </activity>
-        <activity android:name="com.example.studyfromvideo.json.JsonTestActivity"
-                  android:label="@string/title_activity_jsonTest">
-        </activity>
-         <activity android:name="com.example.studyfromvideo.blueTooth.BlueToothTestActivity"
-                  android:label="@string/title_activity_bluetoothTest">
-        </activity>
         
-        
-        <receiver android:name="com.example.studyfromvideo.broadcast.MyReceiver1">
-            <intent-filter >
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+
+        <receiver android:name="com.example.studyfromvideo.broadcast.MyReceiver1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </receiver>
-        
         <receiver android:name="com.example.studyfromvideo.appwidget.ExampleAppWidgetProvider" >
-		    <intent-filter>
-		        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-		    </intent-filter>
-		    <intent-filter>
-		        <action android:name="studyFromVideo.UPDATE_ACTION" />
-		    </intent-filter>
-		    <meta-data android:name="android.appwidget.provider"
-		               android:resource="@xml/appwidget" />
-		</receiver>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="studyFromVideo.UPDATE_ACTION" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget" />
+        </receiver>
+
+        <provider
+            android:name="com.example.studyfromvideo.contentprovider.FirstContentProvider"
+            android:authorities="com.example.studyfromvideo.contentprovider.FirstContentProvider" />
+
         
-        <provider android:name="com.example.studyfromvideo.contentprovider.FirstContentProvider"
-            android:authorities="com.example.studyfromvideo.contentprovider.FirstContentProvider"/>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import com.example.studyfromvideo.expandableListView.EXListViewActivity;
 import com.example.studyfromvideo.handler.HandlerTestActivity;
 import com.example.studyfromvideo.intent.IntentTestActivity;
 import com.example.studyfromvideo.json.JsonTestActivity;
+import com.example.studyfromvideo.location.LocationTestActivity;
 import com.example.studyfromvideo.sqlite.SQLiteTestActivity;
 import com.example.studyfromvideo.wifi.WifiTestActivity;
 import com.example.studyfromvideo.xml.SAXTestActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends Activity {
     private Button animation_test_button = null;
     private Button json_test_button = null;
     private Button blueTooth_button = null;
+    private Button location_Button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -106,6 +108,9 @@ public class MainActivity extends Activity {
 		
 		blueTooth_button = (Button) findViewById(R.id.bluetooth_button);
 		blueTooth_button.setOnClickListener(new BlueToothTestListener());
+		
+		location_Button = (Button) findViewById(R.id.location_button);
+		location_Button.setOnClickListener(new LocationTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -266,6 +271,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, BlueToothTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class LocationTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, LocationTestActivity.class);
 			startActivity(intent);
 		}
 		
