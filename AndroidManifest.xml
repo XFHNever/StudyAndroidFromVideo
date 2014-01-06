@@ -65,6 +65,9 @@
         <activity android:name="com.example.studyfromvideo.animation.AnimationTestActivity"
                   android:label="@string/title_activity_animationTest">
         </activity>
+        <activity android:name="com.example.studyfromvideo.json.JsonTestActivity"
+                  android:label="@string/title_activity_jsonTest">
+        </activity>
         
         
         <receiver android:name="com.example.studyfromvideo.broadcast.MyReceiver1">

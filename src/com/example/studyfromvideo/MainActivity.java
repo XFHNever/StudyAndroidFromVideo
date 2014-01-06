@@ -9,6 +9,7 @@ import com.example.studyfromvideo.download.DownloadTestActivity;
 import com.example.studyfromvideo.expandableListView.EXListViewActivity;
 import com.example.studyfromvideo.handler.HandlerTestActivity;
 import com.example.studyfromvideo.intent.IntentTestActivity;
+import com.example.studyfromvideo.json.JsonTestActivity;
 import com.example.studyfromvideo.sqlite.SQLiteTestActivity;
 import com.example.studyfromvideo.wifi.WifiTestActivity;
 import com.example.studyfromvideo.xml.SAXTestActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends Activity {
     private Button exlistView_test_button = null;
     private Button widget_test_button = null;
     private Button animation_test_button = null;
+    private Button json_test_button = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -96,6 +98,9 @@ public class MainActivity extends Activity {
 		
 		animation_test_button = (Button) findViewById(R.id.animation_button);
 		animation_test_button.setOnClickListener(new AnimationTestListener());
+		
+		json_test_button = (Button) findViewById(R.id.json_button);
+		json_test_button.setOnClickListener(new JsonTestListener());
 	}
 	
 	class IntentTestListener implements OnClickListener{
@@ -238,6 +243,18 @@ public class MainActivity extends Activity {
 			// TODO Auto-generated method stub
 			Intent intent = new Intent();
 			intent.setClass(MainActivity.this, AnimationTestActivity.class);
+			startActivity(intent);
+		}
+		
+	}
+	
+	class JsonTestListener implements OnClickListener{
+
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(MainActivity.this, JsonTestActivity.class);
 			startActivity(intent);
 		}
 		
