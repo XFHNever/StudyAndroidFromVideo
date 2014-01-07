@@ -18,6 +18,7 @@
     <string name="title_activity_jsonTest">JsonTestActivity</string>
     <string name="title_activity_bluetoothTest">BlueToothTestActivity</string>
     <string name="title_activity_location_test">LocationTestActivity</string>
+    <string name="title_activity_sensor_test">SensorTestActivity</string>
     
     
     <string name="action_settings">Settings</string>
@@ -37,6 +38,7 @@
     <string name="json_button">查看JSON测试程序</string>
     <string name="blueTooth_button">查看BlueTooth测试程序</string>
     <string name="location_button">查看User Location测试程序</string>
+    <string name="sensor_button">查看Sensor测试程序</string>
     
     <string name="send_mai_button">发送邮件</string>
     <string name="start_handler_button">开始handler</string>
@@ -74,7 +76,9 @@
     <string name="location_start_button">开始地位</string>
     <string name="geo_button">通过名称获取地址</string>
     <string name="reverseGeo_button">通过地址获取名称</string>
-    
+    <string name="sensor_all_button">获取所有的Sensor</string>
+    <string name="sensor_acc_button">获取加速度Sensor</string>
+    <string name="sensor_pro_button">获取距离Sensor</string>
     
     <string name="exit">退出</string>
     <string name="about">关于</string>

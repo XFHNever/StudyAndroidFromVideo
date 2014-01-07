@@ -92,6 +92,10 @@
             android:name="com.example.studyfromvideo.location.LocationTestActivity"
             android:label="@string/title_activity_location_test" >
         </activity>
+         <activity
+            android:name="com.example.studyfromvideo.sensor.SensorTestActivity"
+            android:label="@string/title_activity_sensor_test" >
+        </activity>
         
         
 
