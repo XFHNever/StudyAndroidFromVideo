@@ -17,6 +17,9 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.NFC" />  
+    
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -95,6 +98,16 @@
          <activity
             android:name="com.example.studyfromvideo.sensor.SensorTestActivity"
             android:label="@string/title_activity_sensor_test" >
+        </activity>
+        <activity
+            android:name="com.example.studyfromvideo.nfc.NFCTestActivity"
+            android:label="@string/title_activity_nfc_test" >
+            <intent-filter>  
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />  
+            </intent-filter>  
+            <meta-data  
+                android:name="android.nfc.action.TECH_DISCOVERED"  
+                android:resource="@xml/nfc_tech_filter" />  
         </activity>
         
         
